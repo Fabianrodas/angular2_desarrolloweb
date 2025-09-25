@@ -1,0 +1,69 @@
+/* Altura y scroll */
+:host {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  background: var(--bs-body-bg);
+  border-right: 1px solid var(--bs-border-color);
+}
+.offcanvas-body { height: 100%; overflow-y: auto; }
+
+/* Secciones */
+ul.nav { padding: .25rem 0; }
+
+.sidebar-heading {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: .25rem .75rem 0 .75rem;   /* igual al template */
+  margin: .25rem 0 .25rem;
+  font-size: .75rem; letter-spacing: .08em;
+  color: var(--bs-secondary-color);
+  text-transform: uppercase;
+}
+
+/* Botón de “+” en Saved reports */
+.sidebar-heading .link-secondary,
+.icon-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.75rem; height: 1.75rem; border-radius: .5rem;
+  color: var(--bs-secondary-color);
+}
+.sidebar-heading .link-secondary:hover,
+.icon-btn:hover {
+  background: var(--bs-tertiary-bg); color: var(--bs-body-color);
+}
+
+/* Ítems: padding y márgenes idénticos al template */
+.nav-link {
+  display: flex; align-items: center; gap: .625rem;
+  padding: .5rem .75rem;             /* <- clave de “ritmo” */
+  margin: 2px 6px;                    /* aire lateral */
+  border-radius: .5rem;
+  color: var(--bs-secondary-color);
+  border-left: 3px solid transparent; /* indicador activo a la izquierda */
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: var(--bs-body-color);
+  background: rgba(var(--bs-primary-rgb), .08);
+}
+.nav-link.active {
+  color: var(--bs-body-color);
+  background: rgba(var(--bs-primary-rgb), .12);
+  border-left-color: var(--bs-primary);
+}
+
+/* Iconos azules y del tamaño justo */
+.bi {
+  width: 1.05rem; height: 1.05rem;
+  fill: currentColor;
+  color: var(--bs-primary);           /* azules como en la demo */
+}
+
+/* Separadores sutiles y alineados */
+hr {
+  margin: .5rem .75rem;
+  opacity: .15;
+}
+
+/* Bloque inferior pegado al fondo */
+.nav.flex-column.mt-auto { margin-top: auto !important; }
